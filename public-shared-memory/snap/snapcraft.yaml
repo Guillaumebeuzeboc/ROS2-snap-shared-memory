@@ -32,4 +32,5 @@ apps:
     command: opt/ros/foxy/bin/ros2 launch demo_nodes_cpp talker_listener.launch.py
     extensions: [ros2-foxy]
     plugs: [network, network-bind, shmem-plug]
+    slots: [shmem-slot]
 
