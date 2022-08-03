@@ -21,5 +21,5 @@ apps:
     extensions: [ros2-foxy]
     plugs: [network, network-bind]
     environment:
-      FASTRTPS_DEFAULT_PROFILES_FILE: ${SNAP_DATA}/fastdds_no_shared_memory.xml
+      FASTRTPS_DEFAULT_PROFILES_FILE: ${SNAP}/snap/hooks/fastdds_no_shared_memory.xml
 
