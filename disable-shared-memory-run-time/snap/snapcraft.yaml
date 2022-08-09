@@ -15,11 +15,17 @@ parts:
     source-subdir: demo_nodes_cpp
     stage-packages: [ros-foxy-ros2launch]
 
+  runner:
+    plugin: dump
+    source: snap/local/
+    organize:
+      'fastdds_no_shared_memory.xml': usr/share/
+
 apps:
   ros2-talker-listener:
     command: opt/ros/foxy/bin/ros2 launch demo_nodes_cpp talker_listener.launch.py
     extensions: [ros2-foxy]
     plugs: [network, network-bind]
     environment:
-      FASTRTPS_DEFAULT_PROFILES_FILE: ${SNAP}/snap/hooks/fastdds_no_shared_memory.xml
+      FASTRTPS_DEFAULT_PROFILES_FILE: ${SNAP}/usr/share/fastdds_no_shared_memory.xml
 

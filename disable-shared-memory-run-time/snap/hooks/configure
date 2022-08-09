@@ -1,2 +1,0 @@
-#! /bin/sh -e
-cp ${SNAP}/meta/hooks/fastdds_no_shared_memory.xml ${SNAP_DATA}/fastdds_no_shared_memory.xml
